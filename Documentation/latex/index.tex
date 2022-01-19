@@ -1,0 +1,82 @@
+\label{index_md_Resource_DoxygenHow}%
+\Hypertarget{index_md_Resource_DoxygenHow}%
+ \DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{C++ Program by Bisection Method}\label{index_autotoc_md2}
+This program implements Bisection Method for finding real root of nonlinear function in {\ttfamily C++} programming language. In this {\ttfamily C++} program, {\ttfamily x0} \& {\ttfamily x1} are two initial guesses, {\ttfamily e} is tolerable error, {\ttfamily f(x)} is actual function whose root is being obtained using bisection method and x is variable which holds and bisected value at each iteration.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysection{C++ Code}\label{index_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#include<iostream>}
+\DoxyCodeLine{\#include<iomanip>}
+\DoxyCodeLine{\#include<math.h>}
+\DoxyCodeLine{}
+\DoxyCodeLine{/*}
+\DoxyCodeLine{ Defining equation to be solved.}
+\DoxyCodeLine{ Change this equation to solve another problem.}
+\DoxyCodeLine{*/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#define f(x) cos(x) -\/ x * exp(x)}
+\DoxyCodeLine{}
+\DoxyCodeLine{using namespace std;}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{ /* Declaring required variables */}
+\DoxyCodeLine{ float x0, x1, x, f0, f1, f, e;}
+\DoxyCodeLine{ int step = 1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{ /* Setting precision and writing floating point values in fixed-\/point notation. */}
+\DoxyCodeLine{    cout<< setprecision(6)<< fixed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{ /* Inputs */}
+\DoxyCodeLine{  up:}
+\DoxyCodeLine{ cout<<"{}Enter first guess: "{};}
+\DoxyCodeLine{    cin>>x0;}
+\DoxyCodeLine{    cout<<"{}Enter second guess: "{};}
+\DoxyCodeLine{    cin>>x1;}
+\DoxyCodeLine{    cout<<"{}Enter tolerable error: "{};}
+\DoxyCodeLine{    cin>>e;}
+\DoxyCodeLine{}
+\DoxyCodeLine{ /* Calculating Functional Value */}
+\DoxyCodeLine{ f0 = f(x0);}
+\DoxyCodeLine{ f1 = f(x1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ /* Checking whether given guesses brackets the root or not. */}
+\DoxyCodeLine{ if( f0 * f1 > 0.0)}
+\DoxyCodeLine{ \{}
+\DoxyCodeLine{  cout<<"{}Incorrect Initial Guesses."{}<< endl;}
+\DoxyCodeLine{  goto up;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{    /* Implementing Bisection Method */}
+\DoxyCodeLine{    cout<< endl<<"{}****************"{}<< endl;}
+\DoxyCodeLine{ cout<<"{}Bisection Method"{}<< endl;}
+\DoxyCodeLine{ cout<<"{}****************"{}<< endl;}
+\DoxyCodeLine{ do }
+\DoxyCodeLine{ \{}
+\DoxyCodeLine{    /* Bisecting Interval */}
+\DoxyCodeLine{    x = (x0 + x1)/2;}
+\DoxyCodeLine{    f = f(x);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    cout<<"{}Iteration-\/"{}<< step<<"{}:\(\backslash\)t x = "{}<< setw(10)<< x<<"{} and f(x) = "{}<< setw(10)<< f(x)<< endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    if( f0 * f < 0)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{      x1 = x;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    else}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{      x0 = x;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    step = step + 1;}
+\DoxyCodeLine{  \}while(fabs(f)>e);}
+\DoxyCodeLine{}
+\DoxyCodeLine{  cout<< endl<< Root is: "{}<<  x<< endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{  return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
