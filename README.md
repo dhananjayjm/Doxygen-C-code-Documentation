@@ -17,4 +17,14 @@ Please open `index.html`
 
 I am attaching few screenshots below for quick reference.
 
-[HomePage of the Documentation](screenshots/main.jpg)
+![HomePage of the Documentation](screenshots/main.jpg)
+
+![Class Hierarchy](screenshots/class_hierarchy.jpg)
+
+![File Reference](screenshots/file_reference.jpg)
+
+![Derived Class Reference](screenshots/Derived_Class_Reference.jpg)
+
+![Main function Documentation](screenshots/main_function_documentation.jpg)
+
+![Member Function Documentation](screenshots/Member_Function_Documentation.jpg)
